@@ -28,7 +28,13 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
 body {
+    height: 100%;
     color: var(--color-black);
     background: var(--color-white);
 }

@@ -3,16 +3,20 @@ import type { ButtonHTMLAttributes } from 'react';
 import './style.css';
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
-    onClick: () => void;
     text: string;
+    className?: string;
 };
 
-function Button({ onClick, text }: Props) {
+function Button({ text, className }: Props) {
     return (
-        <button className="button" type="button" onClick={onClick}>
+        <button className={`${className} button`} type="button">
             {text}
         </button>
     );
 }
+
+Button.defaultProps = {
+    className: '',
+};
 
 export default Button;
