@@ -8,16 +8,12 @@ type Props = {
     className?: string;
 };
 
-function RouteButton({ to, text, className }: Props) {
+function RouteButton({ to, text, className = '' }: Props) {
     return (
         <Link className={`${className} button`} href={to}>
             {text}
         </Link>
     );
 }
-
-RouteButton.defaultProps = {
-    className: '',
-};
 
 export default RouteButton;

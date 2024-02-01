@@ -1,0 +1,29 @@
+.answer {
+    width: 100%;
+    margin-bottom: 8px;
+    background-color: transparent;
+    border: 0px;
+}
+
+.answerId {
+    padding-right: 8px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 116%;
+    color: var(--color-orange);
+}
+
+@media screen and (min-width: 1200px) {
+    .answer {
+        flex-shrink: 1;
+        max-width: calc(100% * (1 / 2));
+        margin: 0;
+    }
+    .answer:nth-child(1n) {
+        margin-right: -1px;
+    }
+    .answer:nth-child(2n) {
+        margin-left: -1px;
+    }
+}

@@ -1,0 +1,16 @@
+.step {
+    margin: 0 0 8px 0;
+}
+
+.stepValue {
+    width: 100%;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 116%;
+    color: var(--color-black);
+    text-align: center;
+}
+.stepValue.disabled {
+    color: var(--color-gray);
+}

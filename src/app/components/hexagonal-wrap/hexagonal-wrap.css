@@ -1,0 +1,235 @@
+.hexagonContainer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    overflow: hidden;
+}
+.hexagonContainer.small {
+    padding: 0 40px;
+}
+.hexagonContainer::before,
+.hexagonContainer::after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    display: block;
+    border-radius: 4px;
+}
+.hexagonContainer::before {
+    left: 17.49px;
+    width: 0;
+    height: 0;
+    border-top: 28px solid transparent;
+    border-right: 29px solid var(--color-white);
+    border-bottom: 28px solid transparent;
+}
+.hexagonContainer.small::before {
+    left: 41.49px;
+    border-top-width: 16px;
+    border-right-width: 16.5px;
+    border-bottom-width: 16px;
+}
+.hexagonContainer:hover::before,
+.hexagonContainer.selected::before {
+    border-right-color: var(--color-orange-lighter);
+}
+.hexagonContainer.success::before {
+    border-right-color: var(--color-green-light);
+}
+.hexagonContainer.error::before {
+    border-right-color: var(--color-red-light);
+}
+.hexagonContainer::after {
+    right: 17.49px;
+    width: 0;
+    height: 0;
+    border-top: 28px solid transparent;
+    border-left: 29px solid var(--color-white);
+    border-bottom: 28px solid transparent;
+}
+.hexagonContainer.small::after {
+    right: 41.49px;
+    border-top-width: 16px;
+    border-left-width: 16.5px;
+    border-bottom-width: 16px;
+}
+.hexagonContainer:hover::after,
+.hexagonContainer.selected::after {
+    border-left-color: var(--color-orange-lighter);
+}
+.hexagonContainer.success::after {
+    border-left-color: var(--color-green-light);
+}
+.hexagonContainer.error::after {
+    border-left-color: var(--color-red-light);
+}
+.hexagonInner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 0 24px;
+}
+.hexagonContainer.small .hexagonInner {
+    padding: 0 11px;
+}
+.hexagonInner::before,
+.hexagonInner::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 4px;
+}
+.hexagonContainer.small .hexagonInner::before,
+.hexagonContainer.small .hexagonInner::after {
+    border-radius: 3px;
+}
+.hexagonInner::before {
+    left: 0px;
+    border-top: 28px solid transparent;
+    border-right: 29px solid var(--color-gray);
+    border-bottom: 28px solid transparent;
+}
+.hexagonContainer.small .hexagonInner::before {
+    border-top-width: 16px;
+    border-right-width: 16.5px;
+    border-bottom-width: 16px;
+}
+.hexagonContainer:hover .hexagonInner::before,
+.hexagonContainer.selected .hexagonInner::before {
+    border-right-color: var(--color-orange);
+}
+.hexagonContainer.success .hexagonInner::before {
+    border-right-color: var(--color-green);
+}
+.hexagonContainer.error .hexagonInner::before {
+    border-right-color: var(--color-red);
+}
+.hexagonInner::after {
+    right: 0;
+    border-top: 28px solid transparent;
+    border-left: 29px solid var(--color-gray);
+    border-bottom: 28px solid transparent;
+}
+.hexagonContainer.small .hexagonInner::after {
+    border-top-width: 16px;
+    border-left-width: 16.5px;
+    border-bottom-width: 16px;
+}
+.hexagonContainer:hover .hexagonInner::after,
+.hexagonContainer.selected .hexagonInner::after {
+    border-left-color: var(--color-orange);
+}
+.hexagonContainer.success .hexagonInner::after {
+    border-left-color: var(--color-green);
+}
+.hexagonContainer.error .hexagonInner::after {
+    border-left-color: var(--color-red);
+}
+.hexagon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 56px;
+    padding: 20px 6px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 116%;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.hexagonContainer.small .hexagon {
+    padding: 8px 6px;
+    height: 32px;
+}
+.hexagonContainer:hover .hexagon,
+.hexagonContainer.selected .hexagon {
+    background-color: var(--color-orange-lighter);
+    border-color: var(--color-orange);
+}
+.hexagonContainer.success .hexagon {
+    background-color: var(--color-green-light);
+    border-color: var(--color-green);
+}
+.hexagonContainer.error .hexagon {
+    background-color: var(--color-red-light);
+    border-color: var(--color-red);
+}
+.hexagon::before,
+.hexagon::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 0.5px);
+    display: block;
+    width: 16px;
+    height: 1px;
+    background-color: var(--color-gray);
+}
+.hexagonContainer.small .hexagon::before,
+.hexagonContainer.small .hexagon::after {
+    width: 40px;
+}
+.hexagon::before {
+    left: -40px;
+}
+.hexagon::after {
+    right: -40px;
+}
+.hexagonContainer.small .hexagon::before {
+    left: -52px;
+}
+.hexagonContainer.small .hexagon::after {
+    right: -52px;
+}
+.hexagonContainer:hover .hexagon::before,
+.hexagonContainer.selected .hexagon::before,
+.hexagonContainer:hover .hexagon::after,
+.hexagonContainer.selected .hexagon::after {
+    background-color: var(--color-orange);
+}
+.hexagonContainer.success .hexagon::before,
+.hexagonContainer.success .hexagon::after {
+    background-color: var(--color-green);
+}
+.hexagonContainer.error .hexagon::before,
+.hexagonContainer.error .hexagon::after {
+    background-color: var(--color-red);
+}
+
+@media screen and (min-width: 1200px) {
+    .hexagonContainer::after {
+        right: 17px;
+    }
+    .hexagonContainer::before,
+    .hexagonContainer::after {
+        border-top-width: 36px;
+        border-bottom-width: 36px;
+    }
+    .hexagonInner::before,
+    .hexagonInner::after {
+        border-top-width: 36px;
+        border-bottom-width: 36px;
+    }
+    .hexagon {
+        height: 72px;
+        padding: 24.5px 48px 24.5px 32px;
+        font-size: 20px;
+        border-radius: 9.5px;
+    }
+}

@@ -1,0 +1,45 @@
+.info {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-gray-light);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+.info.open {
+    transform: translateX(0);
+}
+
+.infoTrigger {
+    position: absolute;
+    z-index: 1;
+    top: 16px;
+    right: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+.steps {
+    margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+    .info {
+        position: relative;
+        transform: translateX(0);
+        justify-content: center;
+        max-width: 376px;
+        width: 100%;
+        background-color: var(--color-white);
+    }
+    .infoTrigger {
+        display: none;
+    }
+}
