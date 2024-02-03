@@ -10,6 +10,9 @@
 .hexagonContainer.small {
     padding: 0 40px;
 }
+.hexagonContainer.disabled {
+    pointer-events: none;
+}
 .hexagonContainer::before,
 .hexagonContainer::after {
     content: '';
@@ -151,7 +154,6 @@
     border-right-color: transparent;
     border-left-color: transparent;
     border-radius: 8px;
-    cursor: pointer;
 }
 .hexagonContainer.small .hexagon {
     padding: 8px 6px;

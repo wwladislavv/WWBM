@@ -20,8 +20,15 @@ export function InfoTrigger({ onClick, children }: InfoTriggerProps) {
 interface Props {
     isOpen: boolean;
     close: () => void;
+    awards: string[];
+    selectedIndex: number;
 }
-export default function GameInfo({ isOpen, close }: Props) {
+export default function GameInfo({
+    isOpen,
+    close,
+    awards,
+    selectedIndex,
+}: Props) {
     return (
         <div className={`${styles.info} ${isOpen ? styles.open : ''}`}>
             <InfoTrigger onClick={close}>
@@ -34,9 +41,14 @@ export default function GameInfo({ isOpen, close }: Props) {
             </InfoTrigger>
 
             <div className={styles.steps}>
-                <StepItem value="1,000,000" />
-                <StepItem value="1,000" selected />
-                <StepItem value="500" disabled />
+                {awards.map((award, index) => (
+                    <StepItem
+                        key={award}
+                        value={award}
+                        selected={index === selectedIndex}
+                        disabled={index > selectedIndex}
+                    />
+                ))}
             </div>
         </div>
     );

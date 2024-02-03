@@ -1,0 +1,266 @@
+[
+    {
+        "question": "In what children's game are participants chased by someone designated \"It\"?",
+        "answers": [
+            {
+                "value": "Tag",
+                "correct": true
+            },
+            {
+                "value": "Simon Says",
+                "correct": false
+            },
+            {
+                "value": "Charades",
+                "correct": false
+            },
+            {
+                "value": "Hopscotch",
+                "correct": false
+            }
+        ],
+        "award": 500
+    },
+    {
+        "question": "On a radio, stations are changed by using what control?",
+        "answers": [
+            {
+                "value": "Tuning",
+                "correct": true
+            },
+            {
+                "value": "Volume",
+                "correct": false
+            },
+            {
+                "value": "Bass",
+                "correct": false
+            },
+            {
+                "value": "Treble",
+                "correct": false
+            }
+        ],
+        "award": 1000
+    },
+    {
+        "question": "Which material is most dense?",
+        "answers": [
+            {
+                "value": "Silver",
+                "correct": false
+            },
+            {
+                "value": "Styrofoam",
+                "correct": false
+            },
+            {
+                "value": "Butter",
+                "correct": false
+            },
+            {
+                "value": "Gold",
+                "correct": true
+            }
+        ],
+        "award": 2000
+    },
+    {
+        "question": "Which state in the United States is largest by area?",
+        "answers": [
+            {
+                "value": "Alaska",
+                "correct": true
+            },
+            {
+                "value": "California",
+                "correct": false
+            },
+            {
+                "value": "Texas",
+                "correct": false
+            },
+            {
+                "value": "Hawaii",
+                "correct": false
+            }
+        ],
+        "award": 4000
+    },
+    {
+        "question": "What is Aurora Borealis commonly known as?",
+        "answers": [
+            {
+                "value": "Fairy Dust",
+                "correct": false
+            },
+            {
+                "value": "Northern Lights",
+                "correct": true
+            },
+            {
+                "value": "Book of ages",
+                "correct": false
+            },
+            {
+                "value": "a Game of Thrones main character",
+                "correct": false
+            }
+        ],
+        "award": 8000
+    },
+    {
+        "question": "Galileo was an Italian astronomer who",
+        "answers": [
+            {
+                "value": "developed the telescope",
+                "correct": false
+            },
+            {
+                "value": "discovered four satellites of Jupiter",
+                "correct": false
+            },
+            {
+                "value": "discovered that the movement of pendulum produces a regular time measurement",
+                "correct": false
+            },
+            {
+                "value": "All of the above",
+                "correct": true
+            }
+        ],
+        "award": 16000
+    },
+    {
+        "question": "Exposure to sunlight helps a person improve his health because",
+        "answers": [
+            {
+                "value": "the infrared light kills bacteria in the body",
+                "correct": false
+            },
+            {
+                "value": "resistance power increases",
+                "correct": false
+            },
+            {
+                "value": "the pigment cells in the skin get stimulated and produce a healthy tan",
+                "correct": false
+            },
+            {
+                "value": "the ultraviolet rays convert skin oil into Vitamin D",
+                "correct": true
+            }
+        ],
+        "award": 32000
+    },
+    {
+        "question": "Sir Thomas Fearnley Cup is awarded to",
+        "answers": [
+            {
+                "value": "a club or a local sport association for remarkable achievements",
+                "correct": true
+            },
+            {
+                "value": "amateur athlete, not necessarily an Olympian",
+                "correct": false
+            },
+            {
+                "value": "National Olympic Committee for outstanding work",
+                "correct": false
+            },
+            {
+                "value": "None of the above",
+                "correct": false
+            }
+        ],
+        "award": 64000
+    },
+    {
+        "question": "The term 'Butterfly Stroke' is referred to in which sport?",
+        "answers": [
+            {
+                "value": "Swimming",
+                "correct": true
+            },
+            {
+                "value": "Boxing",
+                "correct": false
+            },
+            {
+                "value": "Wrestling",
+                "correct": false
+            },
+            {
+                "value": "Weightlifting",
+                "correct": false
+            }
+        ],
+        "award": 125000
+    },
+    {
+        "question": "The term 'Punter' is associated with which of the following sports?",
+        "answers": [
+            {
+                "value": "Hockey",
+                "correct": false
+            },
+            {
+                "value": "Cricket",
+                "correct": false
+            },
+            {
+                "value": "Football",
+                "correct": true
+            },
+            {
+                "value": "Volleyball",
+                "correct": false
+            }
+        ],
+        "award": 250000
+    },
+    {
+        "question": "The term 'Bogey' is associated with which of the following sports?",
+        "answers": [
+            {
+                "value": "Golf",
+                "correct": true
+            },
+            {
+                "value": "Polo",
+                "correct": false
+            },
+            {
+                "value": "Bridge",
+                "correct": false
+            },
+            {
+                "value": "Chess",
+                "correct": false
+            }
+        ],
+        "award": 500000
+    },
+    {
+        "question": "The term 'LBW' is associated with which of the following sports?",
+        "answers": [
+            {
+                "value": "Tennis",
+                "correct": false
+            },
+            {
+                "value": "Cricket",
+                "correct": true
+            },
+            {
+                "value": "Football",
+                "correct": false
+            },
+            {
+                "value": "Hockey",
+                "correct": false
+            }
+        ],
+        "award": 1000000
+    }
+]

@@ -7,6 +7,7 @@ type Props = {
     status: 'selected' | 'success' | 'error' | 'disabled' | undefined;
     children: ReactNode;
     small?: boolean;
+    disabled?: boolean;
 };
 
 export default function HexagonalWrap({
@@ -14,10 +15,13 @@ export default function HexagonalWrap({
     status,
     children,
     small = false,
+    disabled = false,
 }: Props) {
     return (
         <div
-            className={`hexagonContainer ${className} ${status || ''} ${small ? 'small' : ''}`}
+            className={`hexagonContainer ${className} ${status || ''} ${small ? 'small' : ''} ${
+                disabled ? 'disabled' : ''
+            }`}
         >
             <div className="hexagonInner">
                 <div className="hexagon">{children}</div>

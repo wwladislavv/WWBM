@@ -18,6 +18,7 @@ export default function StepItem({
             status={selected ? 'selected' : undefined}
             className={styles.step}
             small
+            disabled
         >
             <div
                 className={`${styles.stepValue} ${disabled ? styles.disabled : ''}`}

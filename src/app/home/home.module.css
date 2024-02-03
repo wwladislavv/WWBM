@@ -37,6 +37,15 @@
     text-align: center;
 }
 
+.label {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 116%;
+    color: var(--color-black);
+    opacity: 0.5;
+}
+
 .control {
     margin: 0 auto;
 }
