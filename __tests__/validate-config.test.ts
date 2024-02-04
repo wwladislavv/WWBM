@@ -1,4 +1,4 @@
-import validate from '../src/app/game/utility/validate-config';
+import validate from 'game/utility/validate-config';
 
 describe('validate config', () => {
     test('question', () => {

@@ -29,6 +29,7 @@
         "src/**/*.ts",
         "src/**/*.tsx",
         ".next/types/**/*.ts",
+        "__tests__/*.test.ts",
     ],
     "exclude": ["node_modules"],
 }
