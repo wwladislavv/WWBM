@@ -7,10 +7,14 @@ import { useRouter } from 'next/navigation';
 import AnswerItem from './components/answer-item';
 import GameInfo, { InfoTrigger } from './components/game-info';
 import useGameInfo from './components/game-info/use-game-info';
+import validate from './utility/validate-config';
+import Errors from './components/config-errors';
 import { Status } from './types';
-import type { Config } from './types';
+import type { Config, ConfigErrors } from './types';
 
 import styles from './game.module.css';
+
+const TimeoutDefault = 1000;
 
 export default function Game() {
     const router = useRouter();
@@ -18,6 +22,7 @@ export default function Game() {
     const { isOpen, toggle } = useGameInfo();
 
     const [config, setConfig] = useState<Config | null>(null);
+    const [configErrors, setConfigErrors] = useState<ConfigErrors | null>(null);
     const [questionIndex, setQuestionIndex] = useState<number | null>(null);
     const [answerStatus, setAnswerStatus] = useState<[number, Status] | null>(
         null
@@ -34,7 +39,24 @@ export default function Game() {
 
     useEffect(() => {
         fetch('/config.json')
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error('Failed to load config');
+                }
+                return res;
+            })
             .then((res) => res.json() as Promise<Config>)
+            .catch(() => {
+                throw new Error('Failed to parse config');
+            })
+            .then((res) => {
+                const errors = validate(res);
+                if (Object.keys(errors).length) {
+                    setConfigErrors(errors);
+                    throw new Error('Invalid config');
+                }
+                return res;
+            })
             .then((res) => {
                 const sortedByAward = res.toSorted((a, b) => b.award - a.award);
 
@@ -59,17 +81,17 @@ export default function Game() {
             setTimeout(() => {
                 setAnswerStatus(null);
                 if (isCorrect) {
-                    if (isLast) {
-                        router.replace(`/home/victory?amount=1000000`);
-                    }
+                    if (isLast) router.replace(`/home/victory?amount=1000000`);
                     setQuestionIndex((prev) => prev! - 1);
                 } else {
                     const prevAward = config![questionIndex! + 1]?.award || 0;
                     router.replace(`/home/defeat?amount=${prevAward}`);
                 }
-            }, 1000);
-        }, 1000);
+            }, TimeoutDefault);
+        }, TimeoutDefault);
     };
+
+    if (configErrors) return <Errors errors={configErrors} />;
 
     return config && questionIndex !== null ? (
         <div className={styles.game}>

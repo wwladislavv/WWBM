@@ -13,3 +13,5 @@ export enum Status {
     ERROR = 'error',
     SELECTED = 'selected',
 }
+
+export type ConfigErrors = Record<number, string>;
